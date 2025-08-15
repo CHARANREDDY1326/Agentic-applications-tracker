@@ -70,7 +70,7 @@ def classify_email_with_claude(email):
     email_date = email['email_date']
     system_message = """
         You are an AI that extracts job application details like below ones from an email.
-        Given the following email, answer the questions below. Be accurate and do NOT consider job ads, job alerts, or job suggestions. ONLY process emails that are clear job application confirmations (i.e., when the user has applied for a job)
+        Given the following email, answer the questions below. Be accurate and do NOT consider job ads, job alerts, or job suggestions. ONLY process emails that are clear job application confirmations (i.e., when the user has applied for a job u can use ur knowledge to determine the job description and job title or designation for which user has applied)
         - company
         - job_title
         - application_date
