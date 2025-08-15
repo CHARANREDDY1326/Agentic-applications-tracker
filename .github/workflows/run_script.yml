@@ -29,13 +29,14 @@ jobs:
       # 4. Set up credentials.json (from GitHub secret)
       - name: Create credentials.json
         run: |
-          echo "${{ secrets.GOOGLE_CREDENTIALS_JSON }}" > credentials.json
+          echo "${{ secrets.GOOGLE_CREDENTIALS_JSON }}"  > credentials.json
+
 
       # 5. Set up token.json (optional, if you already have a stored token)
       - name: Create token.json
-        if: secrets.GMAIL_TOKEN_JSON != ''
         run: |
-          echo "${{ secrets.GMAIL_TOKEN_JSON }}" > token.json
+          echo "${{ secrets.GMAIL_TOKEN_JSON }}"  > token.json
+
 
       # 6. Run Python script
       - name: Run script
